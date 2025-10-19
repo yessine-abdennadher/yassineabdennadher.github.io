@@ -27,11 +27,12 @@
             "styles": [
               "src/styles.css"
             ],
-         "scripts": [
-  "src/assets/js/p5.min.js",
-
-  "src/assets/js/vanta.topology.min.js"
-]
+            "scripts": [
+              "src/assets/js/three.min.js",
+              "src/assets/js/p5.min.js",
+              "src/assets/js/vanta.topology.min.js",
+              "src/assets/js/vanta.halo.min.js"
+            ]
           },
           "configurations": {
             "production": {
