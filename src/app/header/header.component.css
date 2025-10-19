@@ -1,0 +1,8 @@
+header {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+header.ng-animating {
+  opacity: 0;
+  transform: translateY(-100%);
+}
