@@ -32,6 +32,10 @@
               "src/assets/js/p5.min.js",
               "src/assets/js/vanta.topology.min.js",
               "src/assets/js/vanta.halo.min.js"
+            ],
+            "baseHref": "/yassineabdennadher.github.io/",
+            "allowedCommonJsDependencies": [
+              "lottie-web"
             ]
           },
           "configurations": {
@@ -39,8 +43,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -48,7 +52,8 @@
                   "maximumError": "5mb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/yassineabdennadher.github.io/"
             },
             "development": {
               "buildOptimizer": false,
@@ -56,7 +61,8 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "baseHref": "/"
             }
           },
           "defaultConfiguration": "production"
@@ -95,6 +101,13 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/yassineabdennadher.github.io/",
+            "dir": "docs"
           }
         }
       }

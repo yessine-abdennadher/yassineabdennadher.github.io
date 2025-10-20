@@ -12,7 +12,7 @@ export class HeroSecionComponent implements AfterViewInit, OnDestroy {
   constructor(private elRef: ElementRef) {}
 
   ngAfterViewInit() {
-
+    this.initVanta();
     
     // Écoute les changements de classe dark sur <html> (si tu as un switch)
     const observer = new MutationObserver(() => this.reloadVanta());
