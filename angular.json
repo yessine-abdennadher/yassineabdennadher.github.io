@@ -22,7 +22,12 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "skills",
+                "output": "/skills/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -33,7 +38,7 @@
               "src/assets/js/vanta.topology.min.js",
               "src/assets/js/vanta.halo.min.js"
             ],
-            "baseHref": "/",
+            "baseHref": "/yassineabdennadher.github.io/",
             "allowedCommonJsDependencies": [
               "lottie-web"
             ]
@@ -53,7 +58,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/"
+              "baseHref": "/yassineabdennadher.github.io/"
             },
             "development": {
               "buildOptimizer": false,
@@ -106,7 +111,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/",
+            "baseHref": "/yassineabdennadher.github.io/",
             "dir": "docs"
           }
         }
