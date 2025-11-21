@@ -54,8 +54,13 @@
   "CERTIFICATIONS": "Certifications",
   "CERTIFICATION1": "Object-oriented programming, scripting, and automation",
   "CERTIFICATION2": "Networks, routing, and infrastructure simulation",
-  "FEATURES": "Features"
+  "FEATURES": "Features",
+  "PROJECT4_DESC": "An interactive mobile application developed with Flutter, allowing users to test their knowledge through multiple-choice question series.",
   
+  "PROJECT4_FEATURE1": "Intuitive and modern interface",
+  "PROJECT4_FEATURE2": "Timer for each question",
+  "PROJECT4_FEATURE3": "Score summary at the end of the quiz",
+  "PROJECT4_SUBTITLE": "Interactive Mobile Application"
 
 
 }

@@ -51,7 +51,15 @@
     "CERTIFICATION1": "Programmation orientée objet, scripts et automatisation",
   "CERTIFICATION2": "Réseaux, routage, et simulation d’infrastructures Cisco",
 
-  "FEATURES": "Fonctionnalités"
+  "FEATURES": "Fonctionnalités",
+      
+      
+"PROJECT4_DESC": "Une application mobile interactive développée avec Flutter, permettant aux utilisateurs de tester leurs connaissances à travers des séries de questions à choix multiples.",
+  "PROJECT4_FEATURE1": "Interface intuitive et moderne",
+  "PROJECT4_FEATURE2": "Chronomètre pour chaque question",
+  "PROJECT4_FEATURE3": "Résumé du score à la fin du quiz",
+  "PROJECT4_SUBTITLE": "Application Mobile Interactive"
+ 
 
  
 }
