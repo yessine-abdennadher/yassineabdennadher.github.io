@@ -1,42 +1,196 @@
 <!-- Experience Section -->
-<section id="experience" class="container mx-auto px-6 py-20 bg-gray-50 dark:text-gray-200 dark:bg-gray-950 transition-all duration-500">
-  <h2 class="text-5xl font-bold mb-16 dark:text-cyan-400">Expériences professionnelles</h2>
+<section id="experience"
+  class="container mx-auto px-6 py-24 md:py-32 text-gray-800 dark:text-gray-200 transition-all duration-500 relative">
+  <h2 class="font-bold mb-20 text-cyan-600 dark:text-cyan-400 text-center md:text-left">
+    <span class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-cyan-400">{{ 'EXPERIENCE' |
+      translate }}</span>
+  </h2>
 
-  <div class="md:flex md:gap-10 md:items-center">
-    <!-- 🧾 Partie gauche : Liste des expériences -->
-    <div class="md:w-2/4 space-y-8">
+  <!-- Container de la timeline fluide -->
+  <div class="relative w-full max-w-5xl mx-auto" #timelineWrap>
 
-      <!-- Bloc 1 : ASM -->
-      <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border-2 border-cyan-600 hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">ASM — Stagiaire Développeur d’Applications Mobiles</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-lg mt-1">Flutter, GetX, Firebase, API REST (Pixabay)</p>
-        <p class="text-cyan-600 text-sm mt-2">Juillet 2024 – Août 2024 | Sfax, Tunisie</p>
-        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Développement d’une application mobile Flutter inspirée de Pinterest pour explorer et enregistrer des idées de gâteaux.</li>
-          <li>Intégration de l’API Pixabay pour la recherche et l’affichage dynamique d’images.</li>
-          <li>Gestion des favoris et de la persistance des données avec GetX.</li>
-          <li>Conception d’une interface moderne et intuitive adaptée aux différents formats d’écran.</li>
-        </ul>
+    <!-- SVG pour dessiner la courbe sinueuse noire / blanche en mode sombre -->
+    <svg class="absolute inset-0 w-full h-full pointer-events-none overflow-visible z-0" style="min-height: 600px;">
+      <path *ngFor="let p of paths; let i = index" [attr.d]="p" fill="none"
+        class="text-gray-950 dark:text-gray-100 transition-[stroke-dashoffset] duration-[1200ms] ease-out"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" [style.stroke-dasharray]="pathLengths[i] || 400"
+        [style.stroke-dashoffset]="visibleCards[i+1] ? 0 : (pathLengths[i] || 400)"></path>
+    </svg>
+
+    <!-- Cartes et points -->
+    <div class="relative z-10 space-y-24 md:space-y-36">
+
+      <!-- ═══════════════════════════════════════════
+           EXPÉRIENCE 1 — REC-INOV ('26)
+           ═══════════════════════════════════════════ -->
+      <div #expCard class="relative w-full md:w-[65%] md:ml-[15%] transition-all duration-1000 ease-out group"
+        [class.opacity-0]="!visibleCards[0]" [class.translate-y-12]="!visibleCards[0]"
+        [class.opacity-100]="visibleCards[0]" [class.translate-y-0]="visibleCards[0]">
+        <!-- Point d'ancrage cyan avec bordure noire/blanche -->
+        <span #expDot
+          class="absolute left-[-26px] md:left-[-40px] top-12 w-5 h-5 rounded-full border-2 border-gray-950 dark:border-white bg-[#06b6d4] z-20 shadow-[0_0_10px_rgba(6,182,212,0.6)] group-hover:scale-125 transition-all duration-500"></span>
+
+        <div
+          class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-cyan-500/20 dark:border-cyan-500/30 shadow-xl shadow-cyan-500/5 hover:shadow-cyan-500/15 hover:border-cyan-400 transition-all duration-500 relative overflow-hidden">
+
+          <!-- Année géante avec animation fluide au scroll -->
+          <div
+            class="text-6xl md:text-7xl font-black text-cyan-600 dark:text-cyan-400 tracking-tighter mb-4 select-none transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) origin-left"
+            [class.opacity-0]="!visibleCards[0]" [class.scale-50]="!visibleCards[0]"
+            [class.translate-x-[-30px]]="!visibleCards[0]" [class.opacity-100]="visibleCards[0]"
+            [class.scale-100]="visibleCards[0]" [class.translate-x-0]="visibleCards[0]">
+            '26
+          </div>
+
+          <!-- Titre & Infos -->
+          <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-2 dark:group-hover:text-cyan-400 transition-colors">
+            {{ 'REC_INOV' | translate }}
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-1.5 font-medium">
+            <svg class="w-3.5 h-3.5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
+            </svg>
+            {{ 'REC_INOV_LOCATION' | translate }}
+          </p>
+
+          <!-- Tech stack -->
+          <div class="flex flex-wrap gap-2 my-4">
+            <span *ngFor="let tech of ['React Native','Node.js','Express.js','MongoDB','Expo']"
+              class="px-2.5 py-1 text-xs font-semibold rounded-md bg-cyan-50/50 dark:bg-slate-800 text-cyan-700 dark:text-slate-300 border border-cyan-100 dark:border-slate-700">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Points clés -->
+          <ul class="space-y-2.5 mt-2">
+            <li
+              *ngFor="let key of ['REC_INOV_DESC1','REC_INOV_DESC2','REC_INOV_DESC3','REC_INOV_DESC4','REC_INOV_DESC5','REC_INOV_DESC6']"
+              class="flex items-start gap-2.5 text-sm text-gray-700 dark:text-gray-300">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0"></span>
+              <span>{{ key | translate }}</span>
+            </li>
+          </ul>
+
+        </div>
       </div>
 
-      <!-- Bloc 2 : Clinisys -->
-    
+      <!-- ═══════════════════════════════════════════
+           EXPÉRIENCE 2 — Clinisys ('25)
+           ═══════════════════════════════════════════ -->
+      <div #expCard class="relative w-full md:w-[65%] md:ml-[35%] transition-all duration-1000 ease-out group"
+        [class.opacity-0]="!visibleCards[1]" [class.translate-y-12]="!visibleCards[1]"
+        [class.opacity-100]="visibleCards[1]" [class.translate-y-0]="visibleCards[1]">
+        <!-- Point d'ancrage cyan avec bordure noire/blanche -->
+        <span #expDot
+          class="absolute left-[-26px] md:left-[-40px] top-12 w-5 h-5 rounded-full border-2 border-gray-950 dark:border-white bg-[#06b6d4] z-20 shadow-[0_0_10px_rgba(6,182,212,0.6)] group-hover:scale-125 transition-all duration-500"></span>
 
-    </div>
+        <div
+          class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-cyan-500/20 dark:border-cyan-500/30 shadow-xl shadow-cyan-500/5 hover:shadow-cyan-500/15 hover:border-cyan-400 transition-all duration-500 relative overflow-hidden">
 
-    <!-- 🎬 Partie droite : Animation Lottie -->
-    <div class="md:w-2/4 flex justify-center mt-12 md:mt-0">
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border-2 border-cyan-600 hover:-translate-y-1 transition-transform duration-300">
-        <h3 class="text-2xl font-bold text-gray-800 dark:text-white">Clinisys — Stagiaire Développeur Web Full Stack</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-lg mt-1">Angular, Spring Boot, MySQL, API REST</p>
-        <p class="text-cyan-600 text-sm mt-2">Juillet 2025 – Août 2025 | Sfax, Tunisie</p>
-        <ul class="list-disc list-inside mt-4 space-y-2 text-gray-700 dark:text-gray-300">
-          <li>Conception et développement d’une application web de gestion de rendez-vous médicaux.</li>
-          <li>Création d’un backend Spring Boot pour la gestion des patients, médecins et réservations.</li>
-          <li>Développement d’un frontend Angular avec formulaires dynamiques et validation des données.</li>
-          <li>Implémentation d’une communication sécurisée via des API REST et intégration d’une base de données MySQL.</li>
-        </ul>
+          <!-- Année géante avec animation fluide au scroll -->
+          <div
+            class="text-6xl md:text-7xl font-black text-cyan-600 dark:text-cyan-400 tracking-tighter mb-4 select-none transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) origin-left"
+            [class.opacity-0]="!visibleCards[1]" [class.scale-50]="!visibleCards[1]"
+            [class.translate-x-[-30px]]="!visibleCards[1]" [class.opacity-100]="visibleCards[1]"
+            [class.scale-100]="visibleCards[1]" [class.translate-x-0]="visibleCards[1]">
+            '25
+          </div>
+
+          <!-- Titre & Infos -->
+          <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-2 dark:group-hover:text-cyan-400 transition-colors">
+            {{ 'CLINISYS' | translate }}
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-1.5 font-medium">
+            <svg class="w-3.5 h-3.5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
+            </svg>
+            Sfax, Tunisie (Juil – Août 2025)
+          </p>
+
+          <!-- Tech stack -->
+          <div class="flex flex-wrap gap-2 my-4">
+            <span *ngFor="let tech of ['Angular','Spring Boot','MySQL','API REST']"
+              class="px-2.5 py-1 text-xs font-semibold rounded-md bg-cyan-50/50 dark:bg-slate-800 text-cyan-700 dark:text-slate-300 border border-cyan-100 dark:border-slate-700">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Points clés -->
+          <ul class="space-y-2.5 mt-2">
+            <li
+              *ngFor="let key of ['EXPERIENCE_WEB_APP_DEVELOPMENT','EXPERIENCE_APII_INTEGRATION','EXPERIENCE_BACKEND_DEVELOPMENT','EXPERIENCE_FRONTEND_DEVELOPMENT']"
+              class="flex items-start gap-2.5 text-sm text-gray-700 dark:text-gray-300">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0"></span>
+              <span>{{ key | translate }}</span>
+            </li>
+          </ul>
+
+        </div>
       </div>
+
+      <!-- ═══════════════════════════════════════════
+           EXPÉRIENCE 3 — ASM ('24)
+           ═══════════════════════════════════════════ -->
+      <div #expCard class="relative w-full md:w-[65%] md:ml-[10%] transition-all duration-1000 ease-out group"
+        [class.opacity-0]="!visibleCards[2]" [class.translate-y-12]="!visibleCards[2]"
+        [class.opacity-100]="visibleCards[2]" [class.translate-y-0]="visibleCards[2]">
+        <!-- Point d'ancrage cyan avec bordure noire/blanche -->
+        <span #expDot
+          class="absolute left-[-26px] md:left-[-40px] top-12 w-5 h-5 rounded-full border-2 border-gray-950 dark:border-white bg-[#06b6d4] z-20 shadow-[0_0_10px_rgba(6,182,212,0.6)] group-hover:scale-125 transition-all duration-500"></span>
+
+        <div
+          class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl p-6 md:p-8 rounded-3xl border border-cyan-500/20 dark:border-cyan-500/30 shadow-xl shadow-cyan-500/5 hover:shadow-cyan-500/15 hover:border-cyan-400 transition-all duration-500 relative overflow-hidden">
+
+          <!-- Année géante avec animation fluide au scroll -->
+          <div
+            class="text-6xl md:text-7xl font-black text-cyan-600 dark:text-cyan-400 tracking-tighter mb-4 select-none transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) origin-left"
+            [class.opacity-0]="!visibleCards[2]" [class.scale-50]="!visibleCards[2]"
+            [class.translate-x-[-30px]]="!visibleCards[2]" [class.opacity-100]="visibleCards[2]"
+            [class.scale-100]="visibleCards[2]" [class.translate-x-0]="visibleCards[2]">
+            '24
+          </div>
+
+          <!-- Titre & Infos -->
+          <h3
+            class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-2 dark:group-hover:text-cyan-400 transition-colors">
+            {{ 'ASM' | translate }}
+          </h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 flex items-center gap-1.5 font-medium">
+            <svg class="w-3.5 h-3.5 text-cyan-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
+            </svg>
+            Sfax, Tunisie (Juil – Août 2024)
+          </p>
+
+          <!-- Tech stack -->
+          <div class="flex flex-wrap gap-2 my-4">
+            <span *ngFor="let tech of ['Flutter','GetX','Firebase','API REST','Pixabay']"
+              class="px-2.5 py-1 text-xs font-semibold rounded-md bg-cyan-50/50 dark:bg-slate-800 text-cyan-700 dark:text-slate-300 border border-cyan-100 dark:border-slate-700">
+              {{ tech }}
+            </span>
+          </div>
+
+          <!-- Points clés -->
+          <ul class="space-y-2.5 mt-2">
+            <li
+              *ngFor="let key of ['EXPERIENCE_DESCRIPTION','EXPERIENCE_API_INTEGRATION','EXPERIENCE_FAVORITES_MANAGEMENT','EXPERIENCE_UI_DESIGN']"
+              class="flex items-start gap-2.5 text-sm text-gray-700 dark:text-gray-300">
+              <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0"></span>
+              <span>{{ key | translate }}</span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

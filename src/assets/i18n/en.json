@@ -1,0 +1,74 @@
+{
+  "ABOUT": "About",
+  "Im": "I'm",
+  "a software engineering student": "Software Engineer",
+
+   "ABOUT_DESCRIPTION": "I am a graduate software and decision engineering from the International Institute of Technology (IIT), passionate about full stack development, artificial intelligence, and data science. Rigorous, curious, and results-oriented, I design and develop web and mobile applications applying software engineering best practices. I enjoy taking on technical challenges and creating innovative, efficient, and scalable solutions that meet user needs.",
+   "ABOUT_ASSOCIATION": "Associative Life",
+   "Membre de l'IEEE IIT": "Member of IEEE IIT",
+   "Membre de l'ACM IIT": "Member of ACM IIT",
+  "EDUCATION": "Education",
+  "EXPERIENCE": "Experience",
+  "EXPERIENCE_DESCRIPTION": "Developed a Flutter mobile application inspired by Pinterest to explore and save cake ideas.",
+  "EXPERIENCE_API_INTEGRATION": "Integrated Pixabay API for dynamic image search and display.",
+  "EXPERIENCE_FAVORITES_MANAGEMENT": "Managed favorites and data persistence using GetX.",
+  "EXPERIENCE_UI_DESIGN": "Designed a modern and intuitive interface adaptable to various screen sizes.",
+
+
+  "EXPERIENCE_WEB_APP_DEVELOPMENT": "Designed and developed a web application for managing medical appointments.",
+
+  "EXPERIENCE_BACKEND_DEVELOPMENT": "Created a Spring Boot backend for managing patients, doctors, and appointments.",
+  "EXPERIENCE_FRONTEND_DEVELOPMENT": "Developed an Angular frontend with dynamic forms and data validation.",
+  "EXPERIENCE_APII_INTEGRATION": "Implemented secure communication via REST APIs and integrated a MySQL database.",
+  "ASM": "ASM — Mobile Application Developer Intern",
+  "CLINISYS": "Clinisys — Full Stack Web Developer Intern",
+  "REC_INOV": "REC-INOV — Full Stack & Mobile Software Engineer Intern",
+  "REC_INOV_LOCATION": "Sfax, Tunisia",
+  "REC_INOV_DESC1": "Designed and developed WellbeingPro, a mobile application dedicated to tracking and improving employee well-being.",
+  "REC_INOV_DESC2": "Developed the mobile application using React Native and Expo, emphasizing a smooth and intuitive user experience.",
+  "REC_INOV_DESC3": "Designed and implemented secure REST APIs using Node.js, Express.js, and MongoDB.",
+  "REC_INOV_DESC4": "Integrated health data via Health Connect (Android) and HealthKit (iOS) to track physical activity and well-being indicators.",
+  "REC_INOV_DESC5": "Implemented gamification features (challenges, badges, XP, leaderboards), push notifications, and data synchronization.",
+  "REC_INOV_DESC6": "Participated in all project phases following the Agile Scrum methodology, from requirements analysis to development, testing, and deployment.",
+
+
+  "SKILLS": "Skills",
+ "PROJECTS": "Projects",
+
+  "PROJECT1_TITLE": "Travel Agency",
+  "PROJECT1_SUBTITLE": "Web Application",
+  "PROJECT1_DESC": "Developed a complete web application for travel management and booking.",
+  "PROJECT1_FEATURES": "Features",
+  "PROJECT1_FEATURE1": "Travel search and booking",
+  "PROJECT1_FEATURE2": "Management of reservations and destinations",
+  "PROJECT1_FEATURE3": "Responsive and smooth user interface",
+"PROJECT22_DESC": "Mobile application designed to monitor and improve employee well-being through gamification, habit tracking, challenges, badges, and health data synchronization using Health Connect and HealthKit.",
+  "PROJECT2_TITLE": "Focus With Me",
+  "PROJECT2_SUBTITLE": "Web & AI Application",
+  "PROJECT2_DESC": "Demonstration of an intelligent platform for monitoring students' focus and motivation during study sessions.",
+  "PROJECT2_FEATURES": "Features",
+  "PROJECT2_FEATURE1": "Personalized home interface with music and timer",
+  "PROJECT2_FEATURE2": "Real-time focus dashboard and tracking",
+  "PROJECT2_FEATURE3": "Integrated smart assistant and emotion analysis",
+  "PROJECT2_FEATURE4": "Collaborative space and community integration via Discord",
+
+  "PROJECT3_TITLE": "E-commerce Platform",
+  "PROJECT3_SUBTITLE": "Web Application",
+  "PROJECT3_DESC": "Developed a complete e-commerce platform for book sales and management with a recommendation system.",
+  "PROJECT3_FEATURES": "Features",
+  "PROJECT3_FEATURE1": "Book catalog with advanced search",
+  "PROJECT3_FEATURE2": "Shopping cart and payment system",
+  "PROJECT3_FEATURE3": "Personalized recommendation system",
+  "CERTIFICATIONS": "Certifications",
+  "CERTIFICATION1": "Object-oriented programming, scripting, and automation",
+  "CERTIFICATION2": "Networks, routing, and infrastructure simulation",
+  "FEATURES": "Features",
+  "PROJECT4_DESC": "An interactive mobile application developed with Flutter, allowing users to test their knowledge through multiple-choice question series.",
+  
+  "PROJECT4_FEATURE1": "Intuitive and modern interface",
+  "PROJECT4_FEATURE2": "Timer for each question",
+  "PROJECT4_FEATURE3": "Score summary at the end of the quiz",
+  "PROJECT4_SUBTITLE": "Interactive Mobile Application"
+
+
+}

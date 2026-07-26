@@ -13,6 +13,17 @@ import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { CertificationsComponent } from './certifications/certifications.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FormsModule } from '@angular/forms';
+
+
+export function HttpLoaderFactory(http: HttpClient): TranslateLoader {
+  // Cast to any to bypass constructor signature mismatch in installed @ngx-translate/http-loader types
+  return new (TranslateHttpLoader as any)(http, './assets/i18n/', '.json');
+}
+
 
 @NgModule({
   declarations: [
@@ -30,7 +41,17 @@ import { ExperienceComponent } from './experience/experience.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    TranslateModule.forRoot({
+  loader: {
+    provide: TranslateLoader,
+    useFactory: HttpLoaderFactory,
+    deps: [HttpClient],
+  },
+}),
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,8 +14,28 @@ export class HeaderComponent implements OnInit {
   isLogged: boolean = false;
   showMenu = false;
   isInHeroSection: boolean = false;
+  selectedLang: string = 'fr';
+  menuOpen = false;
 
-  constructor(public router: Router) {}
+
+
+constructor(public router: Router, private translate: TranslateService) {
+  translate.addLangs(['en', 'fr']);
+  translate.setDefaultLang('fr');
+
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    this.selectedLang = savedLang;
+    translate.use(savedLang);
+  } else {
+    translate.use('fr');
+  }
+}
+
+changeLanguage(lang: string) {
+  this.translate.use(lang);
+  localStorage.setItem('lang', lang);
+}
 
   ngOnInit(): void {
     this.checkAuth();
