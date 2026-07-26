@@ -1,8 +1,8 @@
 {
   "Im": "Je suis",
-  "a software engineering student": "étudiant en génie logiciel",
+  "a software engineering student": "Ingénieur en génie logiciel",
   "ABOUT": "À propos",
-  "ABOUT_DESCRIPTION": "Je suis étudiant en troisième année de Génie Informatique. Mon objectif est de construire une carrière épanouissante où je pourrai mettre en œuvre mes compétences et connaissances pour contribuer à l'innovation et aux technologies de pointe. Je suis sérieux et attentif aux détails.",
+  "ABOUT_DESCRIPTION": "Ingénieur diplômé en Génie Logiciel et Informatique Décisionnelle de l'Institut International de Technologie (IIT), passionné par le développement full stack, l'intelligence artificielle et la science des données. Rigoureux, curieux et orienté résultats, je conçois et développe des applications web et mobiles en appliquant les bonnes pratiques du génie logiciel. J'aime relever des défis techniques et concevoir des solutions innovantes, performantes et évolutives répondant aux besoins des utilisateurs.",
   "ABOUT_ASSOCIATION": "Vie associative",
   "Membre de l'IEEE IIT": "Membre de l'IEEE IIT",
   "Membre de l'ACM IIT": "Membre de l'ACM IIT",
@@ -12,17 +12,22 @@
   "EXPERIENCE_API_INTEGRATION": "Intégration de l’API Pixabay pour la recherche et l’affichage dynamique d’images.",
   "EXPERIENCE_FAVORITES_MANAGEMENT": "Gestion des favoris et de la persistance des données avec GetX.",
   "EXPERIENCE_UI_DESIGN": "Conception d’une interface moderne et intuitive adaptée aux différents formats d’écran.",
-
   "EXPERIENCE_WEB_APP_DEVELOPMENT": "Conception et développement d’une application web de gestion de rendez-vous médicaux.",
-
   "EXPERIENCE_BACKEND_DEVELOPMENT": "Création d’un backend Spring Boot pour la gestion des patients, médecins et réservations.",
   "EXPERIENCE_FRONTEND_DEVELOPMENT": "Développement d’un frontend Angular avec formulaires dynamiques et validation des données.",
   "EXPERIENCE_APII_INTEGRATION": "Implémentation d’une communication sécurisée via des API REST et intégration d’une base de données MySQL.",
   "ASM": "ASM — Stagiaire Développeur d’Applications Mobiles",
   "CLINISYS": "Clinisys — Stagiaire Développeur Web Full Stack",
+  "REC_INOV": "REC-INOV — Stagiaire Ingénieur Développeur Full Stack & Mobile",
+  "REC_INOV_LOCATION": "Sfax, Tunisie",
+  "REC_INOV_DESC1": "Conception et développement de WellbeingPro, une application mobile dédiée au suivi et à l'amélioration du bien-être des employés.",
+  "REC_INOV_DESC2": "Développement de l'application mobile avec React Native et Expo, en mettant l'accent sur une expérience utilisateur fluide et intuitive.",
+  "REC_INOV_DESC3": "Conception et implémentation d'API REST sécurisées avec Node.js, Express.js et MongoDB.",
+  "REC_INOV_DESC4": "Intégration des données de santé via Health Connect (Android) et HealthKit (iOS) pour le suivi de l'activité physique et des indicateurs de bien-être.",
+  "REC_INOV_DESC5": "Mise en œuvre de fonctionnalités de gamification (défis, badges, XP, classements), de notifications push et de synchronisation des données.",
+  "REC_INOV_DESC6": "Participation à toutes les phases du projet selon la méthodologie Agile Scrum, de l'analyse des besoins au développement, aux tests et au déploiement.",
   "SKILLS": "Compétences",
   "PROJECTS": "Projets",
-
   "PROJECT1_TITLE": "Agence de Voyage",
   "PROJECT1_SUBTITLE": "Application Web",
   "PROJECT1_DESC": "Développement d'une application web complète de gestion et de réservation de voyages.",
@@ -30,7 +35,7 @@
   "PROJECT1_FEATURE1": "Recherche et réservation de voyages",
   "PROJECT1_FEATURE2": "Gestion des réservations et des destinations",
   "PROJECT1_FEATURE3": "Interface utilisateur responsive et fluide",
-
+  "PROJECT22_DESC": "Application mobile de suivi et d'amélioration du bien-être des employés intégrant la gamification, le suivi des habitudes, les défis, les badges et la synchronisation des données de santé via Health Connect et HealthKit.",
   "PROJECT2_TITLE": "Focus With Me",
   "PROJECT2_SUBTITLE": "Application Web & IA",
   "PROJECT2_DESC": "Démonstration d’une plateforme intelligente pour le suivi de la concentration et la motivation des étudiants pendant leurs sessions d’étude.",
@@ -39,7 +44,6 @@
   "PROJECT2_FEATURE2": "Tableau de bord de concentration et suivi en temps réel",
   "PROJECT2_FEATURE3": "Assistant intelligent intégré et analyse des émotions",
   "PROJECT2_FEATURE4": "Espace collaboratif et intégration communautaire via Discord",
-
   "PROJECT3_TITLE": "Plateforme E-commerce",
   "PROJECT3_SUBTITLE": "Application Web",
   "PROJECT3_DESC": "Réalisation d'une plateforme e-commerce complète pour la vente et la gestion de livres avec système de recommandations.",
@@ -48,18 +52,12 @@
   "PROJECT3_FEATURE2": "Panier d'achat et système de paiement",
   "PROJECT3_FEATURE3": "Système de recommandations personnalisées",
   "CERTIFICATIONS": "Certifications",
-    "CERTIFICATION1": "Programmation orientée objet, scripts et automatisation",
+  "CERTIFICATION1": "Programmation orientée objet, scripts et automatisation",
   "CERTIFICATION2": "Réseaux, routage, et simulation d’infrastructures Cisco",
-
   "FEATURES": "Fonctionnalités",
-      
-      
-"PROJECT4_DESC": "Une application mobile interactive développée avec Flutter, permettant aux utilisateurs de tester leurs connaissances à travers des séries de questions à choix multiples.",
+  "PROJECT4_DESC": "Une application mobile interactive développée avec Flutter, permettant aux utilisateurs de tester leurs connaissances à travers des séries de questions à choix multiples.",
   "PROJECT4_FEATURE1": "Interface intuitive et moderne",
   "PROJECT4_FEATURE2": "Chronomètre pour chaque question",
   "PROJECT4_FEATURE3": "Résumé du score à la fin du quiz",
   "PROJECT4_SUBTITLE": "Application Mobile Interactive"
- 
-
- 
 }
