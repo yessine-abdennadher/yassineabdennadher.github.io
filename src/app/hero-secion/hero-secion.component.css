@@ -27,6 +27,15 @@
   animation-delay: 4s;
 }
 
+/* Force le canvas Vanta à occuper tout l'espace disponible */
+::ng-deep #vanta-bg canvas {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
 /* EFFET MACHINE À ÉCRIRE POUR "software engineering student" */
 .typewriter-container {
   display: inline-block;
@@ -197,7 +206,7 @@
 }
 
 /* Animation séquentielle */
-.stagger-animation > * {
+.stagger-animation>* {
   opacity: 0;
   transform: translateY(20px);
   animation: slideInUp 0.6s ease-out forwards;
@@ -231,13 +240,18 @@
   .hero-photo-wrapper {
     position: relative !important;
     width: 100%;
-    height: 45vh;
+    height: auto;
+    right: auto;
+    bottom: 0;
+    display: flex;
     justify-content: center;
     align-items: flex-end;
   }
+
   .hero-photo {
-    height: 45vh;
-    max-width: 100%;
+    height: 40vh;
+    margin-right: 100px;
+    max-width: 160%;
     object-position: bottom center;
   }
 }
