@@ -1,9 +1,9 @@
 /* 3D Flip Card Container */
 .flip-card {
   perspective: 1000px;
-  min-width: 330px;
-  max-width: 370px;
-  height: 460px;
+  min-width: 400px;
+  max-width: 500px;
+  height: 550px;
   flex-shrink: 0;
   scroll-snap-align: start;
 }
@@ -71,14 +71,14 @@
 :host-context(.dark) .flip-card-back,
 .dark .flip-card-back {
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
-  border: 1px solid rgba(168, 85, 247, 0.4);
-  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.25), 0 0 20px rgba(0, 0, 0, 0.6);
+  border: 1px solid   rgba(85, 166, 247, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(85, 166, 247, 0.25), 0 0 20px rgba(0, 0, 0, 0.6);
   color: white;
 }
 
 .flip-card:hover .flip-card-back {
-  border-color: rgba(168, 85, 247, 0.6);
-  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.25);
+  border-color: rgba(85, 166, 247, 0.6);
+  box-shadow: 0 12px 30px rgba(85, 158, 247, 0.25);
 }
 
 /* Futuristic Glow lines & accents */
@@ -99,7 +99,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+  background: linear-gradient(90deg, transparent, #38bdf8, transparent);
 }
 
 /* Scrollbar and snapping */

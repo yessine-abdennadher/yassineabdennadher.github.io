@@ -2,21 +2,17 @@
   "ABOUT": "About",
   "Im": "I'm",
   "a software engineering student": "Software Engineer",
-
-   "ABOUT_DESCRIPTION": "I am a graduate software and decision engineering from the International Institute of Technology (IIT), passionate about full stack development, artificial intelligence, and data science. Rigorous, curious, and results-oriented, I design and develop web and mobile applications applying software engineering best practices. I enjoy taking on technical challenges and creating innovative, efficient, and scalable solutions that meet user needs.",
-   "ABOUT_ASSOCIATION": "Associative Life",
-   "Membre de l'IEEE IIT": "Member of IEEE IIT",
-   "Membre de l'ACM IIT": "Member of ACM IIT",
+  "ABOUT_DESCRIPTION": "I am a graduate software and decision engineering from the International Institute of Technology (IIT), passionate about full stack development, artificial intelligence, and data science. Rigorous, curious, and results-oriented, I design and develop web and mobile applications applying software engineering best practices. I enjoy taking on technical challenges and creating innovative, efficient, and scalable solutions that meet user needs.",
+  "ABOUT_ASSOCIATION": "Associative Life",
+  "Membre de l'IEEE IIT": "Member of IEEE IIT",
+  "Membre de l'ACM IIT": "Member of ACM IIT",
   "EDUCATION": "Education",
   "EXPERIENCE": "Experience",
   "EXPERIENCE_DESCRIPTION": "Developed a Flutter mobile application inspired by Pinterest to explore and save cake ideas.",
   "EXPERIENCE_API_INTEGRATION": "Integrated Pixabay API for dynamic image search and display.",
   "EXPERIENCE_FAVORITES_MANAGEMENT": "Managed favorites and data persistence using GetX.",
   "EXPERIENCE_UI_DESIGN": "Designed a modern and intuitive interface adaptable to various screen sizes.",
-
-
   "EXPERIENCE_WEB_APP_DEVELOPMENT": "Designed and developed a web application for managing medical appointments.",
-
   "EXPERIENCE_BACKEND_DEVELOPMENT": "Created a Spring Boot backend for managing patients, doctors, and appointments.",
   "EXPERIENCE_FRONTEND_DEVELOPMENT": "Developed an Angular frontend with dynamic forms and data validation.",
   "EXPERIENCE_APII_INTEGRATION": "Implemented secure communication via REST APIs and integrated a MySQL database.",
@@ -30,11 +26,8 @@
   "REC_INOV_DESC4": "Integrated health data via Health Connect (Android) and HealthKit (iOS) to track physical activity and well-being indicators.",
   "REC_INOV_DESC5": "Implemented gamification features (challenges, badges, XP, leaderboards), push notifications, and data synchronization.",
   "REC_INOV_DESC6": "Participated in all project phases following the Agile Scrum methodology, from requirements analysis to development, testing, and deployment.",
-
-
   "SKILLS": "Skills",
- "PROJECTS": "Projects",
-
+  "PROJECTS": "Projects",
   "PROJECT1_TITLE": "Travel Agency",
   "PROJECT1_SUBTITLE": "Web Application",
   "PROJECT1_DESC": "Developed a complete web application for travel management and booking.",
@@ -42,7 +35,11 @@
   "PROJECT1_FEATURE1": "Travel search and booking",
   "PROJECT1_FEATURE2": "Management of reservations and destinations",
   "PROJECT1_FEATURE3": "Responsive and smooth user interface",
-"PROJECT22_DESC": "Mobile application designed to monitor and improve employee well-being through gamification, habit tracking, challenges, badges, and health data synchronization using Health Connect and HealthKit.",
+  "PROJECT22_DESC": "Mobile application designed to monitor and improve employee well-being through gamification, habit tracking, challenges, badges, and health data synchronization using Health Connect and HealthKit.",
+  "PROJECT22_SHORT_DESC": "Mobile application for tracking and improving employee well-being.",
+  "PROJECT22_FEATURE1": "Health Connect (Android) & HealthKit (iOS) integration",
+  "PROJECT22_FEATURE2": "Gamification system (challenges, XP, badges, leaderboards)",
+  "PROJECT22_FEATURE3": "Habit tracking and real-time synchronization",
   "PROJECT2_TITLE": "Focus With Me",
   "PROJECT2_SUBTITLE": "Web & AI Application",
   "PROJECT2_DESC": "Demonstration of an intelligent platform for monitoring students' focus and motivation during study sessions.",
@@ -51,7 +48,6 @@
   "PROJECT2_FEATURE2": "Real-time focus dashboard and tracking",
   "PROJECT2_FEATURE3": "Integrated smart assistant and emotion analysis",
   "PROJECT2_FEATURE4": "Collaborative space and community integration via Discord",
-
   "PROJECT3_TITLE": "E-commerce Platform",
   "PROJECT3_SUBTITLE": "Web Application",
   "PROJECT3_DESC": "Developed a complete e-commerce platform for book sales and management with a recommendation system.",
@@ -64,11 +60,26 @@
   "CERTIFICATION2": "Networks, routing, and infrastructure simulation",
   "FEATURES": "Features",
   "PROJECT4_DESC": "An interactive mobile application developed with Flutter, allowing users to test their knowledge through multiple-choice question series.",
-  
   "PROJECT4_FEATURE1": "Intuitive and modern interface",
   "PROJECT4_FEATURE2": "Timer for each question",
   "PROJECT4_FEATURE3": "Score summary at the end of the quiz",
-  "PROJECT4_SUBTITLE": "Interactive Mobile Application"
-
-
+  "PROJECT4_SUBTITLE": "Interactive Mobile Application",
+  "PROJECT5_TITLE": "Cafe Shop",
+  "PROJECT5_SUBTITLE": "Mobile Application",
+  "PROJECT5_DESC": "Modern mobile application for ordering and managing beverages in a café with cart and customization.",
+  "PROJECT5_FEATURE1": "Catalog and customization (sugar, size, add-ons)",
+  "PROJECT5_FEATURE2": "Cart and quick ordering",
+  "PROJECT5_FEATURE3": "Order history and loyalty program",
+  "PROJECT6_TITLE": "CRM Auto Lion",
+  "PROJECT6_SUBTITLE": "Web & Management Application",
+  "PROJECT6_DESC": "Complete commercial service management with sales tracking, leads, promises, client history, and active alerts.",
+  "PROJECT6_FEATURE1": "Sales management & tracking of sales files",
+  "PROJECT6_FEATURE2": "Leads tracking, social networks & promises",
+  "PROJECT6_FEATURE3": "Statistics, goals & after-sales marketing module",
+  "PROJECT7_TITLE": "Mechanical ERP",
+  "PROJECT7_SUBTITLE": "ERP & Management Software",
+  "PROJECT7_DESC": "Complete business activity management, total mechanical manufacturing, customer parts, billing, and employees.",
+  "PROJECT7_FEATURE1": "Mechanical manufacturing & parts management",
+  "PROJECT7_FEATURE2": "Customers and employees management",
+  "PROJECT7_FEATURE3": "Complete tracking of company workflow"
 }

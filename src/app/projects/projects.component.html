@@ -1,359 +1,680 @@
-<section id="projects" class="container mx-auto px-6 py-24 md:py-28 text-gray-800 dark:text-gray-200 transition-all duration-500">
-  <h2 class="font-bold mb-16 text-cyan-600 dark:text-cyan-400">
-    <span class="text-3xl sm:text-4xl md:text-5xl md:text-left text-center font-bold mb-16 text-cyan-600 dark:text-cyan-400">{{ 'PROJECTS' | translate }}</span>
+<section id="projects"
+  class="container mx-auto px-6 py-24 md:py-28 text-gray-800 dark:text-gray-200 transition-all duration-500">
+  <h2 class="font-bold mb-16 text-gray-900 dark:text-gray-400">
+    <span class="text-3xl sm:text-4xl md:text-5xl text-center md:text-left font-bold mb-6 dark:text-cyan-400">{{
+      'PROJECTS' | translate }}</span>
   </h2>
 
   <!-- Container avec scroll horizontal -->
   <div class="projects-container relative">
     <!-- Grille avec scroll horizontal (Flip Cards) -->
-    <div class="projects-grid flex overflow-x-auto mx-auto pb-6 gap-8 scrollbar-hide snap-x snap-mandatory" #projectsContainer>
-      
-      <!-- Projet 1 : Agence de Voyage -->
+    <div class="projects-grid flex overflow-x-auto mx-auto pb-6 gap-8 scrollbar-hide snap-x snap-mandatory"
+      (scroll)="onScroll()" #projectsContainer>
+
+      <!-- Position 1 : WellbeingPro -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <!-- FRONT -->
-          <div class="flip-card-front">
-            <div class="h-44 bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-900 relative overflow-hidden flex flex-col justify-end p-5">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
-              <div class="absolute top-4 right-4 flex space-x-2">
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-cyan-300 border border-cyan-500/30">Angular</span>
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-emerald-300 border border-emerald-500/30">FastAPI</span>
-              </div>
-              <div class="relative z-10 text-white">
-                <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md">{{ 'PROJECT1_TITLE' | translate }}</h3>
-                <p class="text-xs text-cyan-200 font-medium tracking-wider uppercase opacity-90">{{ 'PROJECT1_SUBTITLE' | translate }}</p>
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <!-- Background Image -->
+            <img src="assets/wellbeingpro.png" alt="WellbeingPro Background"
+              class="absolute inset-0 w-full h-full object-cover z-0" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/45 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/20">01</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/45 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/20">React
+                  Native</span>
+                <span
+                  class="px-2.5 py-1 bg-black/45 backdrop-blur-md rounded-full text-xs font-semibold text-violet-300 border border-violet-500/20">AI</span>
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 leading-relaxed">
-                {{ 'PROJECT1_DESC' | translate }}
-              </p>
-
-              <div>
-                <div class="flex flex-wrap gap-2 my-4">
-                  <span class="px-2.5 py-1 bg-cyan-50 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-500/20 rounded-md text-xs font-mono">Angular</span>
-                  <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 rounded-md text-xs font-mono">FastAPI</span>
-                  <span class="px-2.5 py-1 bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-500/20 rounded-md text-xs font-mono">MongoDB</span>
-                </div>
-
-                <div class="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800 text-xs text-cyan-600 dark:text-cyan-400 font-medium">
-                  <span class="flex items-center gap-1.5 animate-pulse">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                    </svg>
-                    Hover to view details
-                  </span>
-                  <span class="text-gray-400 dark:text-gray-500 font-mono">01/04</span>
-                </div>
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">WellbeingPro</h3>
+              <p class="text-xs text-indigo-200 font-medium tracking-wider uppercase opacity-95 mb-3">Application Mobile
+                &
+                Bien-être</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-indigo-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">01/08</span>
               </div>
             </div>
           </div>
 
           <!-- BACK -->
           <div class="flip-card-back">
-            <div>
-              <div class="flex justify-between items-center mb-4 pb-3 border-b border-purple-200 dark:border-purple-500/30">
-                <h3 class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-purple-600 dark:from-cyan-400 dark:to-purple-400">
-                  {{ 'PROJECT1_TITLE' | translate }}
-                </h3>
-                <a href="https://github.com/yessine-abdennadher/Agence-Voyage" target="_blank" rel="noopener noreferrer" 
-                   class="p-2 bg-purple-50 dark:bg-purple-950/80 hover:bg-purple-100 dark:hover:bg-purple-800 text-purple-700 dark:text-purple-200 rounded-lg border border-purple-200 dark:border-purple-500/40 transition-colors shadow-sm"
-                   aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <!-- Background Image -->
+            <img src="assets/back/wellbeingpro_no_phone.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="flex justify-between items-center mb-4 pb-3 border-b border-indigo-200 dark:border-indigo-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600 dark:from-indigo-400 dark:to-violet-400">
+                    WellbeingPro
+                  </h3>
+                  <span
+                    class="p-2 bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-200 rounded-lg border border-indigo-200 dark:border-indigo-500/40 shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-2.5">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT22_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT22_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT22_FEATURE3' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-indigo-200 dark:border-indigo-500/20">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-indigo-600/10 to-violet-600/10 dark:from-indigo-950/40 dark:to-violet-950/40 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT22_DESC' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Position 2 : Focus With Me -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <img src="assets/focus.png" alt="Focus Background"
+              class="absolute inset-0 w-full h-full object-cover z-0 scale-[1.3] -translate-y-[4%]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/20">02</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/20">Angular</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-cyan-300 border border-cyan-500/20">ML</span>
+              </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">Focus With Me</h3>
+              <p class="text-xs text-indigo-200 font-medium tracking-wider uppercase opacity-95 mb-3">Application Web &
+                IA
+              </p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-indigo-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">02/08</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <!-- Background Image -->
+            <img src="assets/back/focus_no_laptop.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="flex justify-between items-center mb-4 pb-3 border-b border-indigo-200 dark:border-indigo-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400">
+                    {{ 'PROJECT2_TITLE' | translate }}
+                  </h3>
+                  <a href="https://github.com/yessine-abdennadher/Focus_With_ME" target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 dark:hover:bg-indigo-800 text-indigo-700 dark:text-indigo-200 rounded-lg border border-indigo-200 dark:border-indigo-500/40 transition-colors shadow-sm"
+                    aria-label="GitHub Repository">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-indigo-600 dark:text-indigo-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-2">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT2_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT2_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT2_FEATURE3' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-indigo-500 dark:text-indigo-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT2_FEATURE4' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-indigo-200 dark:border-indigo-500/20 space-y-3">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-indigo-600/10 to-cyan-600/10 dark:from-indigo-950/40 dark:to-cyan-950/40 text-indigo-700 dark:text-indigo-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT2_DESC' | translate }}
+                </div>
+                <a href="https://github.com/yessine-abdennadher/Focus_With_ME" target="_blank" rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
+                  <span>View Source Code</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
                   </svg>
                 </a>
               </div>
-
-              <div class="space-y-3">
-                <h4 class="font-semibold text-xs text-purple-600 dark:text-purple-300 uppercase tracking-widest">{{ 'FEATURES' | translate }}</h4>
-                <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-cyan-500 dark:text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT1_FEATURE1' | translate }}</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-cyan-500 dark:text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT1_FEATURE2' | translate }}</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-cyan-500 dark:text-cyan-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT1_FEATURE3' | translate }}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-purple-200 dark:border-purple-500/20">
-              <a href="https://github.com/yessine-abdennadher/Agence-Voyage" target="_blank" rel="noopener noreferrer" 
-                 class="w-full py-2.5 px-4 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
-                <span>View Source Code</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
       </div>
 
-
-      <!-- Projet 2 : WellbeingPro -->
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <!-- FRONT -->
-    <div class="flip-card-front">
-      <div class="h-44 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-900 relative overflow-hidden flex flex-col justify-end p-5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
-
-        <div class="absolute top-4 right-4 flex space-x-2">
-          <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-emerald-300 border border-emerald-500/30">
-            React Native
-          </span>
-          <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-cyan-300 border border-cyan-500/30">
-            AI
-          </span>
-        </div>
-
-        <div class="relative z-10 text-white">
-          <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md">
-            WellbeingPro
-          </h3>
-          <p class="text-xs text-emerald-200 font-medium tracking-wider uppercase opacity-90">
-            Application Mobile & Bien-être
-          </p>
-        </div>
-      </div>
-
-      <div class="p-6 flex-1 flex flex-col justify-between">
-        <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 leading-relaxed">
-          {{ 'PROJECT22_DESC' | translate }}
-        </p>
-
-        <div>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="px-2.5 py-1 bg-cyan-50 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-500/20 rounded-md text-xs font-mono">
-              React Native
-            </span>
-
-            <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 rounded-md text-xs font-mono">
-              Node.js
-            </span>
-
-            <span class="px-2.5 py-1 bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20 rounded-md text-xs font-mono">
-              MongoDB
-            </span>
-
-            <span class="px-2.5 py-1 bg-pink-50 dark:bg-pink-950/60 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-pink-500/20 rounded-md text-xs font-mono">
-              Health API
-            </span>
-          </div>
-
-          <div class="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-            <span class="flex items-center gap-1.5 animate-pulse">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
-                </path>
-              </svg>
-              Hover to view details
-            </span>
-
-            <span class="text-gray-400 dark:text-gray-500 font-mono">
-              02/04
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-      <!-- Projet 2 : Focus With Me -->
+      <!-- Position 3 : Agence de Voyage -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <!-- FRONT -->
-          <div class="flip-card-front">
-            <div class="h-44 bg-gradient-to-br from-purple-600 via-pink-600 to-rose-900 relative overflow-hidden flex flex-col justify-end p-5">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
-              <div class="absolute top-4 right-4 flex space-x-2">
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-purple-300 border border-purple-500/30">Angular</span>
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-pink-300 border border-pink-500/30">ML</span>
-              </div>
-              <div class="relative z-10 text-white">
-                <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md">Focus With Me</h3>
-                <p class="text-xs text-pink-200 font-medium tracking-wider uppercase opacity-90">Application Web & IA</p>
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <img src="assets/agence.png" alt="Agence Background"
+              class="absolute inset-0 w-full h-full object-cover z-0 scale-[1.2] -translate-y-[3%]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-sky-300 border border-sky-500/20">03</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-sky-300 border border-sky-500/20">Angular</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">FastAPI</span>
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 leading-relaxed">
-                {{ 'PROJECT2_DESC' | translate }}
-              </p>
-
-              <div>
-                <div class="flex flex-wrap gap-2 my-4">
-                  <span class="px-2.5 py-1 bg-cyan-50 dark:bg-cyan-950/60 text-cyan-700 dark:text-cyan-300 border border-cyan-200 dark:border-cyan-500/20 rounded-md text-xs font-mono">Angular</span>
-                  <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 rounded-md text-xs font-mono">FastAPI</span>
-                  <span class="px-2.5 py-1 bg-pink-50 dark:bg-pink-950/60 text-pink-700 dark:text-pink-300 border border-pink-200 dark:border-pink-500/20 rounded-md text-xs font-mono">Machine Learning</span>
-                </div>
-
-                <div class="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800 text-xs text-pink-600 dark:text-pink-400 font-medium">
-                  <span class="flex items-center gap-1.5 animate-pulse">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                    </svg>
-                    Hover to view details
-                  </span>
-                  <span class="text-gray-400 dark:text-gray-500 font-mono">02/04</span>
-                </div>
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">{{ 'PROJECT1_TITLE' | translate }}
+              </h3>
+              <p class="text-xs text-sky-200 font-medium tracking-wider uppercase opacity-95 mb-3">{{
+                'PROJECT1_SUBTITLE' | translate }}</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-sky-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">03/08</span>
               </div>
             </div>
           </div>
 
           <!-- BACK -->
           <div class="flip-card-back">
-            <div>
-              <div class="flex justify-between items-center mb-4 pb-3 border-b border-pink-200 dark:border-pink-500/30">
-                <h3 class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400">
-                  {{ 'PROJECT2_TITLE' | translate }}
-                </h3>
-                <a href="https://github.com/yessine-abdennadher/Focus_With_ME" target="_blank" rel="noopener noreferrer" 
-                   class="p-2 bg-pink-50 dark:bg-pink-950/80 hover:bg-pink-100 dark:hover:bg-pink-800 text-pink-700 dark:text-pink-200 rounded-lg border border-pink-200 dark:border-pink-500/40 transition-colors shadow-sm"
-                   aria-label="GitHub Repository">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            <!-- Background Image -->
+            <img src="assets/back/agence_sans_device.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-4 pb-3 border-b border-sky-200 dark:border-sky-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-amber-600 dark:from-sky-400 dark:to-amber-400">
+                    {{ 'PROJECT1_TITLE' | translate }}
+                  </h3>
+                  <a href="https://github.com/yessine-abdennadher/Agence-Voyage" target="_blank"
+                    rel="noopener noreferrer"
+                    class="p-2 bg-sky-50 dark:bg-sky-950/80 hover:bg-sky-100 dark:hover:bg-sky-800 text-sky-700 dark:text-sky-200 rounded-lg border border-sky-200 dark:border-sky-500/40 transition-colors shadow-sm"
+                    aria-label="GitHub Repository">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-sky-600 dark:text-sky-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT1_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT1_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT1_FEATURE3' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pt-4 border-t border-sky-200 dark:border-sky-500/20 space-y-3">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-sky-600/10 to-amber-600/10 dark:from-sky-950/40 dark:to-amber-950/40 text-sky-700 dark:text-sky-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT1_DESC' | translate }}
+                </div>
+                <a href="https://github.com/yessine-abdennadher/Agence-Voyage" target="_blank" rel="noopener noreferrer"
+                  class="w-full py-2.5 px-4 bg-gradient-to-r from-sky-600 to-amber-600 hover:from-sky-500 hover:to-amber-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
+                  <span>View Source Code</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
                   </svg>
                 </a>
               </div>
-
-              <div class="space-y-3">
-                <h4 class="font-semibold text-xs text-pink-600 dark:text-pink-300 uppercase tracking-widest">{{ 'FEATURES' | translate }}</h4>
-                <ul class="text-xs text-gray-700 dark:text-gray-300 space-y-2">
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-pink-500 dark:text-pink-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT2_FEATURE1' | translate }}</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-pink-500 dark:text-pink-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT2_FEATURE2' | translate }}</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-pink-500 dark:text-pink-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT2_FEATURE3' | translate }}</span>
-                  </li>
-                  <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-pink-500 dark:text-pink-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                    </svg>
-                    <span>{{ 'PROJECT2_FEATURE4' | translate }}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="pt-4 border-t border-pink-200 dark:border-pink-500/20">
-              <a href="https://github.com/yessine-abdennadher/Focus_With_ME" target="_blank" rel="noopener noreferrer" 
-                 class="w-full py-2.5 px-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
-                <span>View Source Code</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Projet 3 : Flutter Quiz App -->
+      <!-- Position 4 : CRM Auto Lion -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <!-- FRONT -->
-          <div class="flip-card-front">
-            <div class="h-44 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-900 relative overflow-hidden flex flex-col justify-end p-5">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
-              <div class="absolute top-4 right-4 flex space-x-2">
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-sky-300 border border-sky-500/30">Flutter</span>
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/30">Dart</span>
-              </div>
-              <div class="relative z-10 text-white">
-                <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md">Flutter Quiz App</h3>
-                <p class="text-xs text-sky-200 font-medium tracking-wider uppercase opacity-90">{{ 'PROJECT4_SUBTITLE' | translate }}</p>
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <img src="assets/crm.png" alt="CRM Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-orange-300 border border-orange-500/20">04</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-orange-300 border border-orange-500/20">React</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">Node.js</span>
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 leading-relaxed">
-                {{ 'PROJECT4_DESC' | translate }}
-              </p>
-
-              <div>
-                <div class="flex flex-wrap gap-2 my-4">
-                  <span class="px-2.5 py-1 bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-500/20 rounded-md text-xs font-mono">Flutter</span>
-                  <span class="px-2.5 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-500/20 rounded-md text-xs font-mono">Dart</span>
-                  <span class="px-2.5 py-1 bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/20 rounded-md text-xs font-mono">Mobile</span>
-                </div>
-
-                <div class="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800 text-xs text-indigo-600 dark:text-indigo-400 font-medium">
-                  <span class="flex items-center gap-1.5 animate-pulse">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                    </svg>
-                    Hover to view details
-                  </span>
-                  <span class="text-gray-400 dark:text-gray-500 font-mono">03/04</span>
-                </div>
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">{{ 'PROJECT6_TITLE' | translate }}
+              </h3>
+              <p class="text-xs text-orange-200 font-medium tracking-wider uppercase opacity-95 mb-3">{{
+                'PROJECT6_SUBTITLE' | translate }}</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-orange-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">04/08</span>
               </div>
             </div>
           </div>
 
           <!-- BACK -->
           <div class="flip-card-back">
-            <div>
-              <div class="flex justify-between items-center mb-4 pb-3 border-b border-indigo-200 dark:border-indigo-500/30">
-                <h3 class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600 dark:from-sky-400 dark:to-indigo-400">
+            <!-- Background Image -->
+            <img src="assets/back/crm_flipped_no_table.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/20 to-white/30 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="flex justify-between items-center mb-4 pb-3 border-b border-orange-200 dark:border-orange-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-600 dark:from-orange-400 dark:to-amber-400">
+                    {{ 'PROJECT6_TITLE' | translate }}
+                  </h3>
+                  <span
+                    class="p-2 bg-orange-50 dark:bg-orange-950/80 text-orange-700 dark:text-orange-200 rounded-lg border border-orange-200 dark:border-orange-500/40 shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-orange-600 dark:text-orange-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-orange-500 dark:text-orange-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT6_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-orange-500 dark:text-orange-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT6_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-orange-500 dark:text-orange-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT6_FEATURE3' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-orange-200 dark:border-orange-500/20 space-y-3">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-orange-600/10 to-amber-600/10 dark:from-orange-950/40 dark:to-amber-950/40 text-orange-700 dark:text-orange-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT6_DESC' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Position 5 : ERP Mécanique -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <img src="assets/erp.png" alt="ERP Background"
+              class="absolute inset-0 w-full h-full object-cover z-0 -translate-y-[1%]" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-cyan-300 border border-cyan-500/20">05</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-cyan-300 border border-cyan-500/20">React</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-blue-300 border border-blue-500/20">PostgreSQL</span>
+              </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">{{ 'PROJECT7_TITLE' | translate }}
+              </h3>
+              <p class="text-xs text-cyan-200 font-medium tracking-wider uppercase opacity-95 mb-3">{{
+                'PROJECT7_SUBTITLE' | translate }}</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-cyan-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">05/08</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <!-- Background Image -->
+            <img src="assets/back/erp_flipped_no_table.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/70 via-white/10 to-white/30 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="flex justify-between items-center mb-4 pb-3 border-b border-cyan-200 dark:border-cyan-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-slate-600 dark:from-blue-400 dark:to-slate-400">
+                    {{ 'PROJECT7_TITLE' | translate }}
+                  </h3>
+                  <span
+                    class="p-2 bg-blue-50 dark:bg-blue-950/80 text-blue-700 dark:text-blue-200 rounded-lg border border-blue-200 dark:border-blue-500/40 shadow-sm">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
+                </div>
+
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-blue-600 dark:text-blue-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT7_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT7_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-blue-500 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT7_FEATURE3' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-blue-200 dark:border-blue-500/20 space-y-3">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-blue-600/10 to-slate-600/10 dark:from-blue-950/40 dark:to-blue-950/40 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT7_DESC' | translate }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Position 6 : Flutter Quiz App -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-violet-900 z-0"></div>
+            <img src="assets/quiz.png" alt="Quiz Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-sky-300 border border-sky-500/20">06</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-sky-300 border border-sky-500/20">Flutter</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-indigo-300 border border-indigo-500/20">Dart</span>
+              </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">Flutter Quiz App</h3>
+              <p class="text-xs text-sky-200 font-medium tracking-wider uppercase opacity-95 mb-3">{{
+                'PROJECT4_SUBTITLE' | translate }}</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-sky-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">06/08</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <!-- Background Image -->
+            <img src="assets/back/quiz_sans_device.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div class="flex justify-between items-center mb-4 pb-3 border-b border-sky-200 dark:border-sky-500/30">
+                <h3
+                  class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-indigo-600 dark:from-sky-400 dark:to-indigo-400">
                   Flutter Quiz App
                 </h3>
-                <a href="https://github.com/yessine-abdennadher/flutter-projet" target="_blank" rel="noopener noreferrer" 
-                   class="p-2 bg-indigo-50 dark:bg-indigo-950/80 hover:bg-indigo-100 dark:hover:bg-indigo-800 text-indigo-700 dark:text-indigo-200 rounded-lg border border-indigo-200 dark:border-indigo-500/40 transition-colors shadow-sm"
-                   aria-label="GitHub Repository">
+                <a href="https://github.com/yessine-abdennadher/flutter-projet" target="_blank"
+                  rel="noopener noreferrer"
+                  class="p-2 bg-sky-50 dark:bg-sky-950/80 hover:bg-sky-100 dark:hover:bg-sky-800 text-sky-700 dark:text-sky-200 rounded-lg border border-sky-200 dark:border-sky-500/40 transition-colors shadow-sm"
+                  aria-label="GitHub Repository">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                   </svg>
                 </a>
               </div>
 
               <div class="space-y-3">
-                <h4 class="font-semibold text-xs text-indigo-600 dark:text-indigo-300 uppercase tracking-widest">{{ 'FEATURES' | translate }}</h4>
+                <h4 class="font-semibold text-xs text-sky-600 dark:text-sky-400 uppercase tracking-widest">{{
+                  'FEATURES' | translate }}</h4>
                 <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT4_FEATURE1' | translate }}</span>
                   </li>
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT4_FEATURE2' | translate }}</span>
                   </li>
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-sky-500 dark:text-sky-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT4_FEATURE3' | translate }}</span>
                   </li>
@@ -361,57 +682,63 @@
               </div>
             </div>
 
-            <div class="pt-4 border-t border-indigo-200 dark:border-indigo-500/20">
-              <a href="https://github.com/yessine-abdennadher/flutter-projet" target="_blank" rel="noopener noreferrer" 
-                 class="w-full py-2.5 px-4 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
+            <div class="pt-4 border-t border-sky-200 dark:border-sky-500/20 space-y-3">
+              <div
+                class="w-full py-2 px-3 bg-gradient-to-r from-sky-600/10 to-indigo-600/10 dark:from-sky-950/40 dark:to-sky-950/40 text-sky-700 dark:text-sky-300 rounded-lg text-xs font-medium text-center">
+                {{ 'PROJECT4_DESC' | translate }}
+              </div>
+              <a href="https://github.com/yessine-abdennadher/flutter-projet" target="_blank" rel="noopener noreferrer"
+                class="w-full py-2.5 px-4 bg-gradient-to-r from-sky-600 to-indigo-600 hover:from-sky-500 hover:to-indigo-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
                 <span>View Source Code</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
                 </svg>
               </a>
+            </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Projet 4 : Plateforme E-commerce -->
+      <!-- Position 7 : Plateforme E-commerce -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <!-- FRONT -->
-          <div class="flip-card-front">
-            <div class="h-44 bg-gradient-to-br from-amber-600 via-orange-600 to-red-900 relative overflow-hidden flex flex-col justify-end p-5">
-              <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent)]"></div>
-              <div class="absolute top-4 right-4 flex space-x-2">
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-blue-300 border border-blue-500/30">React</span>
-                <span class="px-3 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/30">Laravel</span>
-              </div>
-              <div class="relative z-10 text-white">
-                <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md">Plateforme E-commerce</h3>
-                <p class="text-xs text-amber-200 font-medium tracking-wider uppercase opacity-90">Application Web</p>
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-600 to-red-900 z-0"></div>
+            <div
+              class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.12),transparent_70%)] z-0">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent z-0"></div>
+
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">07</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">React</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-red-300 border border-red-500/20">Laravel</span>
               </div>
             </div>
 
-            <div class="p-6 flex-1 flex flex-col justify-between">
-              <p class="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 leading-relaxed">
-                {{ 'PROJECT3_DESC' | translate }}
-              </p>
-
-              <div>
-                <div class="flex flex-wrap gap-2 my-4">
-                  <span class="px-2.5 py-1 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/20 rounded-md text-xs font-mono">React</span>
-                  <span class="px-2.5 py-1 bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-500/20 rounded-md text-xs font-mono">Laravel</span>
-                  <span class="px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/20 rounded-md text-xs font-mono">MySQL</span>
-                </div>
-
-                <div class="flex items-center justify-between pt-3 border-t border-gray-200 dark:border-gray-800 text-xs text-amber-600 dark:text-amber-400 font-medium">
-                  <span class="flex items-center gap-1.5 animate-pulse">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
-                    </svg>
-                    Hover to view details
-                  </span>
-                  <span class="text-gray-400 dark:text-gray-500 font-mono">04/04</span>
-                </div>
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">{{ 'PROJECT3_TITLE' | translate }}
+              </h3>
+              <p class="text-xs text-amber-200 font-medium tracking-wider uppercase opacity-95 mb-3">Application Web</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-amber-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">07/08</span>
               </div>
             </div>
           </div>
@@ -419,36 +746,47 @@
           <!-- BACK -->
           <div class="flip-card-back">
             <div>
-              <div class="flex justify-between items-center mb-4 pb-3 border-b border-amber-200 dark:border-amber-500/30">
-                <h3 class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 dark:from-amber-400 dark:to-orange-400">
+              <div
+                class="flex justify-between items-center mb-4 pb-3 border-b border-amber-200 dark:border-amber-500/30">
+                <h3
+                  class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-red-600 dark:from-amber-400 dark:to-red-400">
                   {{ 'PROJECT3_TITLE' | translate }}
                 </h3>
-                <a href="#" class="p-2 bg-amber-50 dark:bg-amber-950/80 hover:bg-amber-100 dark:hover:bg-amber-800 text-amber-700 dark:text-amber-200 rounded-lg border border-amber-200 dark:border-amber-500/40 transition-colors shadow-sm"
-                   aria-label="GitHub Repository">
+                <a href="#"
+                  class="p-2 bg-amber-50 dark:bg-amber-950/80 hover:bg-amber-100 dark:hover:bg-amber-800 text-amber-700 dark:text-amber-200 rounded-lg border border-amber-200 dark:border-amber-500/40 transition-colors shadow-sm"
+                  aria-label="GitHub Repository">
                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                   </svg>
                 </a>
               </div>
 
               <div class="space-y-3">
-                <h4 class="font-semibold text-xs text-amber-600 dark:text-amber-300 uppercase tracking-widest">{{ 'FEATURES' | translate }}</h4>
+                <h4 class="font-semibold text-xs text-amber-600 dark:text-amber-300 uppercase tracking-widest">{{
+                  'FEATURES' | translate }}</h4>
                 <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT3_FEATURE1' | translate }}</span>
                   </li>
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT3_FEATURE2' | translate }}</span>
                   </li>
                   <li class="flex items-start">
-                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                      stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                     <span>{{ 'PROJECT3_FEATURE3' | translate }}</span>
                   </li>
@@ -456,12 +794,17 @@
               </div>
             </div>
 
-            <div class="pt-4 border-t border-amber-200 dark:border-amber-500/20">
-              <a href="#" 
-                 class="w-full py-2.5 px-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
+            <div class="pt-4 border-t border-amber-200 dark:border-amber-500/20 space-y-3">
+              <div
+                class="w-full py-2 px-3 bg-gradient-to-r from-amber-600/10 to-red-600/10 dark:from-amber-950/40 dark:to-red-950/40 text-amber-700 dark:text-red-300 rounded-lg text-xs font-medium text-center">
+                {{ 'PROJECT3_DESC' | translate }}
+              </div>
+              <a href="#"
+                class="w-full py-2.5 px-4 bg-gradient-to-r from-amber-600 to-red-600 hover:from-amber-500 hover:to-red-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
                 <span>View Source Code</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                  </path>
                 </svg>
               </a>
             </div>
@@ -469,46 +812,125 @@
         </div>
       </div>
 
-    </div>
-  </div>
+      <!-- Position 8 : Cafe Shop -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <!-- FRONT -->
+          <div class="flip-card-front relative flex flex-col justify-between p-6 h-full overflow-hidden text-white">
+            <img src="assets/cafeshop.png" alt="Cafe Shop Background"
+              class="absolute inset-0 w-full h-full object-cover z-0" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/5 z-0"></div>
 
-  <!-- Panneau de Contrôle Futuriste sous la grille -->
-  <div class="flex items-center justify-center mt-10">
-    <div class="inline-flex items-center gap-3 p-2 bg-white/80 dark:bg-slate-900/90 backdrop-blur-xl border border-gray-200 dark:border-cyan-500/30 rounded-full shadow-xl shadow-cyan-500/10">
-      <!-- Bouton gauche -->
-      <button 
-        (click)="scrollProjects('left')"
-        [disabled]="activeIndex === 0"
-        class="p-2.5 rounded-full text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all duration-300"
-        aria-label="Projet précédent">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-        </svg>
-      </button>
+            <!-- Top Section -->
+            <div class="relative z-10 flex justify-between items-center w-full">
+              <span
+                class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">08</span>
+              <div class="flex space-x-1.5">
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-amber-300 border border-amber-500/20">React
+                  Native</span>
+                <span
+                  class="px-2.5 py-1 bg-black/40 backdrop-blur-md rounded-full text-xs font-semibold text-orange-300 border border-orange-500/20">TypeScript</span>
+              </div>
+            </div>
 
-      <!-- Puces interactives numérotées -->
-      <div class="flex items-center gap-2 px-2">
-        <button 
-          *ngFor="let i of [0, 1, 2, 3]" 
-          (click)="scrollToProject(i)"
-          [class]="activeIndex === i 
-            ? 'px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full text-xs font-mono font-bold shadow-md shadow-cyan-500/30 scale-105 transition-all duration-300' 
-            : 'px-2 py-1 text-gray-400 dark:text-gray-500 hover:text-cyan-500 dark:hover:text-cyan-400 rounded-full text-xs font-mono font-medium transition-all duration-300'"
-          [attr.aria-label]="'Go to project ' + (i + 1)">
-          0{{ i + 1 }}
-        </button>
+            <!-- Bottom Section -->
+            <div class="relative z-10 mt-auto w-full">
+              <h3 class="text-2xl font-extrabold tracking-wide drop-shadow-md mb-1.5">{{ 'PROJECT5_TITLE' | translate }}
+              </h3>
+              <p class="text-xs text-amber-200 font-medium tracking-wider uppercase opacity-95 mb-3">{{
+                'PROJECT5_SUBTITLE' | translate }}</p>
+              <div class="flex items-center justify-between pt-3 border-t border-white/20 text-xs font-medium">
+                <span class="flex items-center gap-1.5 text-amber-400 animate-pulse">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">
+                    </path>
+                  </svg>
+                  Hover to view details
+                </span>
+                <span class="text-gray-400 font-mono">08/08</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BACK -->
+          <div class="flip-card-back">
+            <!-- Background Image -->
+            <img src="assets/back/cafeshop_sans_device.png" alt=""
+              class="absolute inset-0 w-full h-full object-cover z-0 opacity-90" />
+            <div
+              class="absolute inset-0 bg-gradient-to-b from-white/60 via-white/50 to-white/70 dark:from-slate-900/70 dark:via-slate-900/65 dark:to-slate-900/75 z-0">
+            </div>
+            <div class="relative z-10 flex flex-col h-full justify-between">
+              <div>
+                <div
+                  class="flex justify-between items-center mb-4 pb-3 border-b border-amber-200 dark:border-amber-500/30">
+                  <h3
+                    class="font-bold text-xl text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 dark:from-amber-400 dark:to-orange-400">
+                    {{ 'PROJECT5_TITLE' | translate }}
+                  </h3>
+                  <a href="#"
+                    class="p-2 bg-amber-50 dark:bg-amber-950/80 hover:bg-amber-100 dark:hover:bg-amber-800 text-amber-700 dark:text-amber-200 rounded-lg border border-amber-200 dark:border-amber-500/40 transition-colors shadow-sm"
+                    aria-label="GitHub Repository">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="space-y-3">
+                  <h4 class="font-semibold text-xs text-amber-600 dark:text-amber-400 uppercase tracking-widest">{{
+                    'FEATURES' | translate }}</h4>
+                  <ul class="text-sm text-gray-700 dark:text-gray-300 space-y-2.5">
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT5_FEATURE1' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT5_FEATURE2' | translate }}</span>
+                    </li>
+                    <li class="flex items-start">
+                      <svg class="w-4 h-4 mr-2 text-amber-500 dark:text-amber-400 mt-0.5 flex-shrink-0" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                      </svg>
+                      <span>{{ 'PROJECT5_FEATURE3' | translate }}</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-amber-200 dark:border-amber-500/20 space-y-3">
+                <div
+                  class="w-full py-2 px-3 bg-gradient-to-r from-amber-600/10 to-orange-600/10 dark:from-amber-950/40 dark:to-orange-950/40 text-amber-700 dark:text-amber-300 rounded-lg text-xs font-medium text-center">
+                  {{ 'PROJECT5_DESC' | translate }}
+                </div>
+                <a href="#"
+                  class="w-full py-2.5 px-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 text-white rounded-lg font-medium text-sm text-center flex items-center justify-center gap-2 shadow-md transition-all duration-300">
+                  <span>View Source Code</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Bouton droit -->
-      <button 
-        (click)="scrollProjects('right')"
-        [disabled]="activeIndex === totalProjects - 1"
-        class="p-2.5 rounded-full text-cyan-600 dark:text-cyan-400 hover:bg-cyan-500/20 disabled:opacity-30 disabled:hover:bg-transparent transition-all duration-300"
-        aria-label="Projet suivant">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-        </svg>
-      </button>
     </div>
   </div>
 </section>
